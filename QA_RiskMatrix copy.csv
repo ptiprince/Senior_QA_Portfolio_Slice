@@ -1,0 +1,23 @@
+RiskID,Area,Evidence,Suggested Tests,Priority
+R1,Payments,Recent gateway SDK upgrade; checkout is top-funnel,"• Timeout and latency scenarios
+• Retry logic validation
+• Idempotency checks
+• Wallet availability
+• Negative authorization tests
+• Mocked refund/void flows",H
+R2,Pricing & Customization,Incidents on add-on limits & promos; multi-currency,"• Decision table for options × limits × promo
+• Boundary value analysis on totals
+• Multi-currency locale edge tests
+• Rounding rules validation",H
+R3,API Contract Drift,Frequent changes in ordering/stores services,"• OpenAPI schema validation
+• Enum and required fields testing
+• Pagination defaults and limits
+• Error shape and response verification",H
+R4,Store Schedule / Availability,DST changes; weekend spikes; cache issues,"• Timezone matrix testing
+• Closed→open transition checks
+• Cache invalidation scenarios
+• Stale data detection",M
+R5,UI Fragility,Rapid UI iterations across devices,"• Semantic selector policy validation
+• Visual regression diffs
+• Canary test journeys
+• Layout shift detection",M
